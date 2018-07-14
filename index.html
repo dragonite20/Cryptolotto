@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Browser Miner</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">      
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB3CDE_SKAJQunGoP6puPXadLtjH20wM-k",
+            authDomain: "machobear-5475f.firebaseapp.com",
+            databaseURL: "https://machobear-5475f.firebaseio.com",
+            projectId: "machobear-5475f",
+            storageBucket: "",
+            messagingSenderId: "27932406471"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    </head>
+    <body>     
+        <div id="container">
+            <div id="startPage">
+                <h1>Welcome to CryptoJackpot</h1>
+                <p>Put your extra computing power to work and earn money!</p>
+                <input id="addressBox" type="text" name="addressField" pattern="[A-Za-z0-9]{95}" required>
+                <input type="button"  onclick="minerPage()" value="Begin">
+                <p id="error"></p>
+            </div>
+            <div id="miningPage">
+                <h3 id="minerAddress"></h3>
+                <p id="mhs">HASHES/S:   0</p>
+                <p id="totalmhs">TOTAL:  0</p>
+                <input type="button" id="startMining" onclick="startMiner()" value="Start">
+                <input type="button" id="stopMining" onclick="stopMiner()" value="Stop">
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
